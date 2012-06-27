@@ -237,7 +237,7 @@ module Vpim
         # end
         # # Make sure it's terminated with no more than a single NL.
         # l.gsub(/\s*\z/, '') + "\n"
-        @line
+        @line + "\n"
       end
 
       alias to_s encode
