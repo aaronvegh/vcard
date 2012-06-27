@@ -229,14 +229,15 @@ module Vpim
       # FIXME - breaks round-trip encoding, need to change this to not wrap
       # fields that are already wrapped.
       def encode(width=nil)
-        width = 75 unless width
-        l = @line
-        # Wrap to width, unless width is zero.
-        if width > 0
-          l = l.gsub(/.{#{width},#{width}}/) { |m| m + "\n " }
-        end
-        # Make sure it's terminated with no more than a single NL.
-        l.gsub(/\s*\z/, '') + "\n"
+        # width = 75 unless width
+        # l = @line
+        # # Wrap to width, unless width is zero.
+        # if width > 0
+        #   l = l.gsub(/.{#{width},#{width}}/) { |m| m + "\n " }
+        # end
+        # # Make sure it's terminated with no more than a single NL.
+        # l.gsub(/\s*\z/, '') + "\n"
+        @line
       end
 
       alias to_s encode
