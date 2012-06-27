@@ -230,14 +230,14 @@ module Vpim
       # fields that are already wrapped.
       def encode(width=nil)
         # width = 75 unless width
-        # l = @line
+        l = @line
         # # Wrap to width, unless width is zero.
         # if width > 0
         #   l = l.gsub(/.{#{width},#{width}}/) { |m| m + "\n " }
         # end
         # # Make sure it's terminated with no more than a single NL.
         # l.gsub(/\s*\z/, '') + "\n"
-        @line + "\n"
+        l << "\n"
       end
 
       alias to_s encode
