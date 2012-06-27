@@ -40,9 +40,8 @@ Gem::Specification.new do |s|
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
   s.files = %w[
-    HISTORY
     LICENSE
-    README
+    README.rdoc
     vcard.gemspec
   ]
   # = MANIFEST =
